@@ -1,4 +1,4 @@
-let something = parseFloat(window.prompt("Введите любое число"));
+let something = parseInt(window.prompt("Введите любое число"));
 if(something>=0) {
 	console.log(something);
 }else if(something<0) {
