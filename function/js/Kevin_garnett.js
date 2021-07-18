@@ -1,4 +1,7 @@
 
+let goodresult = "Enough $$$";
+let badresult = "Not enough $$$";
+
 function haveEnough() {
 	let totalCash = parseFloat(window.prompt("Сколько у Вас наличных?"));	
 	let wathesCount = parseFloat(window.prompt("Сколько часов Вы хотите купить?"));
@@ -7,14 +10,14 @@ function haveEnough() {
 	let earringsPrice = parseFloat(window.prompt("А одни сережки сколько стоят?"));	
 	let wathesSum = wathesCount*wathesPrice;
 	let earringsSum = earringsCount*earringsPrice;
-	let totalSum = wathesSum + earringsSum;	
-	let goodresult = "Enough $$$";
-	let badresult = "Not enough $$$";
-			(totalCash >= totalSum) ? alert(goodresult) : alert(badresult);		
+	let totalSum = wathesSum + earringsSum;		
+			(totalCash >= totalSum) ? alert(goodresult) : reload();	
 	}
 	haveEnough();
-
 function reload() {
+	alert(badresult);
 	window.location.reload();
 }
-reload();
+
+
+
